@@ -30,7 +30,7 @@ cron.schedule('1 * * * * *', function(){
         }
         // Authorize a client with the loaded credentials, then call the
         // Drive API.
-        authorize(JSON.parse(content), listFiles);
+        authorize(JSON.parse(content),uploadFiles);
         });
 
         /**
@@ -112,8 +112,7 @@ cron.schedule('1 * * * * *', function(){
          *
          * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
          */
-        function listFiles(auth) {
-            var service = google.drive('v3');
+        function uploadFiles(auth) {
             var drive = google.drive({ version: 'v3', auth: auth });
 
             drive.files.create({
