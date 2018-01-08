@@ -5,6 +5,6 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Shopping Cart' });
 });
-
+console.log('test jenkins')
 module.exports = router;
 
