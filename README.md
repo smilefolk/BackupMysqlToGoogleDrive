@@ -22,3 +22,5 @@
 * Click **OK** to dismiss the resulting dialog.
 * Click the **(Download JSON)** button to the right of the client ID.
 * Move this file to your working directory and rename it **client_secret.json.**
+
+Build Jenkins To Staging
