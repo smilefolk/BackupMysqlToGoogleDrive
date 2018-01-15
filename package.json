@@ -6,8 +6,7 @@
     "start": "node ./bin/www",
     "test": "node ./routes/backup_mysql.js",
     "googledrive": "nodemon ./routes/googledrive.js",
-    "jenkins" : "nodemon ./routes/jenkins.js",
-    "gdrive" : "nodemon ./routes/gdrive.js",
+    "gdrive" : "node ./routes/gdrive.js",
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
