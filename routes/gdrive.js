@@ -6,7 +6,7 @@ var path = require('path');
 var crypto = require('crypto');
 var util = require('util');
 //syncFolder(localPath,googlePath)
-syncFolder('/Users/folk/myapp/shopping-cart/routes', 'test/routes');
+syncFolder('/Users/folk/myapp/shopping-cart/routes', 'testBackup/routes');
 
 function syncFolder(localFolderPath, remoteFolderPath) {
 
