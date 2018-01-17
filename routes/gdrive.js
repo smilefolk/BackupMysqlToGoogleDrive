@@ -1,13 +1,13 @@
-var fs          = require('fs');
-var readline    = require('readline');
-var google      = require('googleapis');
-var OAuth2      = google.auth.OAuth2;
-var path        = require('path');
-var crypto      = require('crypto');
-var util        = require('util');
-var cron        = require('node-cron');
+var fs = require('fs');
+var readline = require('readline');
+var google = require('googleapis');
+var OAuth2 = google.auth.OAuth2;
+var path = require('path');
+var crypto = require('crypto');
+var util = require('util');
+var cron = require('node-cron');
 //syncFolder(localPath,googlePath)
-syncFolder('/Users/folk/myapp/shopping-cart/routes', 'testBackup/routes');
+syncFolder('/Users/folk/myapp/ittp/syncgdrive/gdrive/testgdrive', 'shared/CA + DE/MoneyTable/Application/mt-api-docs');
 
 function syncFolder(localFolderPath, remoteFolderPath) {
 
@@ -185,7 +185,7 @@ function syncFolder(localFolderPath, remoteFolderPath) {
                     remoteItemExists = true;
 
                     // item is in both local and remote folders, remove its index from the array
-                    remoteItemsToRemoveByIndex = remoteItemsToRemoveByIndex.filter(function (value) { return value != i });  
+                    remoteItemsToRemoveByIndex = remoteItemsToRemoveByIndex.filter(function (value) { return value != i });
                     break;
                 }
             }
