@@ -7,7 +7,7 @@ var crypto = require('crypto');
 var util = require('util');
 var cron = require('node-cron');
 //syncFolder(localPath,googlePath)
-syncFolder('/Users/folk/myapp/ittp/syncgdrive/gdrive/testgdrive', 'shared/CA + DE/MoneyTable/Application/mt-api-docs');
+syncFolder('/jenkins_folk/testgdrive', 'shared/CA + DE/MoneyTable/Application/mt-api-docs');
 
 function syncFolder(localFolderPath, remoteFolderPath) {
 
