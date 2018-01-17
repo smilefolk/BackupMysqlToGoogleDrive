@@ -1,10 +1,11 @@
-var fs = require('fs');
-var readline = require('readline');
-var google = require('googleapis');
-var OAuth2 = google.auth.OAuth2;
-var path = require('path');
-var crypto = require('crypto');
-var util = require('util');
+var fs          = require('fs');
+var readline    = require('readline');
+var google      = require('googleapis');
+var OAuth2      = google.auth.OAuth2;
+var path        = require('path');
+var crypto      = require('crypto');
+var util        = require('util');
+var cron        = require('node-cron');
 //syncFolder(localPath,googlePath)
 syncFolder('/Users/folk/myapp/shopping-cart/routes', 'testBackup/routes');
 
@@ -202,7 +203,6 @@ function syncFolder(localFolderPath, remoteFolderPath) {
     }
 
     function updateSingleFileIfNeeded(buffer, remoteItem) {
-        console.log('remoteItem')
 
         var md5sum = crypto.createHash('md5');
         md5sum.update(buffer);
@@ -246,7 +246,7 @@ function syncFolder(localFolderPath, remoteFolderPath) {
 
         else
             itemToInsert.media = { body: buffer };
-        console.log('insert')
+
         drive.files.insert(itemToInsert, function (err, response) {
             if (err) {
                 invokeLater(err, function () {

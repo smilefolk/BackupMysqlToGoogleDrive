@@ -1,6 +1,10 @@
-var mysqlDump = require('mysqldump');
-var moment = require('moment-timezone');
+var mysqlDump   = require('mysqldump');
+var moment      = require('moment-timezone');
+var cron        = require('node-cron');
 moment.tz('Asia/Bangkok').format();  
+// cron.schedule('* * * * * *', function(){
+//     console.log('Hello');
+// });
 console.log('running');
     mysqlDump({
         host: 'localhost',
